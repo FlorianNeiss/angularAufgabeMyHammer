@@ -14,6 +14,6 @@ export class Body{
     categories: Category[];
     state: string;
     description: string;
-    enddate: string;
+    end_date: string;
     created_at: string;
 }

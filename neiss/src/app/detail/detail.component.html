@@ -1,18 +1,20 @@
 <h3>Details</h3>
-<div class="card">
+<div class="card" style="max-width: 34rem;">
+  <div class="card-header">
+    {{body?.title}}
+  </div>
   <div class="card-body">
-    <p class="card-text">{{body?.id}}</p>
-    <p class="card-text">{{body?.title}}</p>
-    <p class="card-text">{{body?.zip_code}}</p>
-    <p class="card-text">{{body?.thumbnail}}</p>
-    <p class="card-text">{{body?.attachments}}</p>
-    <p class="card-text">{{body?.counter.messages_total}}</p>
-    <p class="card-text">{{body?.counter.messages_unread}}</p>
-    <p class="card-text">{{body?.is_awarded}}</p>
-    <p class="card-text" *ngFor="let category of body?.categories">{{category.id}}</p>
-    <p class="card-text">{{body?.state}}</p>
-    <p class="card-text">{{body?.description}}</p>
-    <p class="card-text">{{body?.enddate}}</p>
-    <p class="card-text">{{body?.created_at}}</p>
+    <p class="card-text">id = {{body?.id}}</p>
+    <p class="card-text">zip_code = {{body?.zip_code}}</p>
+    <p class="card-text">thumbnail = {{body?.thumbnail}}</p>
+    <p class="card-text">attachments = {{body?.attachments}}</p>
+    <p class="card-text">counter messages_total = {{body?.counter.messages_total}}</p>
+    <p class="card-text">counter messages_unread = {{body?.counter.messages_unread}}</p>
+    <p class="card-text">is_awarded = {{body?.is_awarded}}</p>
+    <p class="card-text" *ngFor="let category of body?.categories">category id = {{category.id}}</p>
+    <p class="card-text">state = {{body?.state}}</p>
+    <p class="card-text">description = {{body?.description}}</p>
+    <p class="card-text">end_date = {{body?.end_date | date:'medium'}}</p>
+    <p class="card-text">created_at = {{body?.created_at | date:'medium'}}</p>
   </div>
 </div>

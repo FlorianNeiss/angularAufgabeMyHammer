@@ -1,3 +1,17 @@
-<p>
-  detail works!
-</p>
+<h3>Details</h3>
+<div style="display:grid">
+
+<span>{{body?.id}}</span>
+<span>{{body?.title}}</span>
+<span>{{body?.zip_code}}</span>
+<span>{{body?.thumbnail}}</span>
+<span>{{body?.attachments}}</span>
+<span >{{body?.counter.messages_total}}</span>
+<span >{{body?.counter.messages_unread}}</span>
+<span>{{body?.is_awarded}}</span>
+<span *ngFor="let category of body?.categories">{{category.id}}</span>
+<span>{{body?.state}}</span>
+<span>{{body?.description}}</span>
+<span>{{body?.enddate}}</span>
+<span>{{body?.created_at}}</span>
+</div>

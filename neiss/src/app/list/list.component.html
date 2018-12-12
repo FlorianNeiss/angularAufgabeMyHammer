@@ -1,7 +1,7 @@
 <h3>List</h3>
 <div class="grid grid-pad">
   <a *ngFor="let body of job?.body" class="col-1-4"
-      routerLink="/detail/{{body.id}}">
+      [routerLink]="['', { outlets: { right: ['detail', body.id] } }]">
     <div class="module hero">
       <h4>{{body.title}}</h4>
     </div>

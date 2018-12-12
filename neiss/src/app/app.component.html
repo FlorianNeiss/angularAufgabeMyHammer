@@ -1,6 +1,8 @@
 <h1>{{title}}</h1>
 <nav>
   <a routerLink="/list">List</a>
-  <!-- <a routerLink="/details">Details</a> -->
 </nav>
 <router-outlet></router-outlet>
+<div style="float:right">
+  <router-outlet name="right"></router-outlet>
+</div>

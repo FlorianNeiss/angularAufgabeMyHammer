@@ -9,10 +9,7 @@ import { Body } from 'src/models/body';
 export class JobService {
   constructor(private http: HttpClient) {   }
   public getJSON(): Observable<Job> {
+    // TO-DO change encoding from WINDOWS1252 to UTF8
     return this.http.get<Job>('./assets/jobs.json');
-  }
-  public getBody(): Observable<Body> {
-    var test = this.http.get<Body>('./assets/jobs.json');
-    return test;
   }
 }

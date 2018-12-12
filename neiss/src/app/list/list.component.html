@@ -1,9 +1,6 @@
-<h3>List</h3>
-<div class="grid grid-pad">
-  <a *ngFor="let body of job?.body" class="col-1-4"
-      [routerLink]="['', { outlets: { right: ['detail', body.id] } }]">
-    <div class="module hero">
-      <h4>{{body.title}}</h4>
-    </div>
-  </a>
-</div>
+<h3>Liste</h3>
+<a *ngFor="let body of job?.body" [routerLink]="['', { outlets: { right: ['detail', body.id] } }]">
+  <button class="btn btn-outline-primary btn-lg btn-block">
+    <h4>{{body.title}}</h4>
+  </button>
+</a>

@@ -1,17 +1,18 @@
 <h3>Details</h3>
-<div style="display:grid">
-
-  <span>{{body?.id}}</span>
-  <span>{{body?.title}}</span>
-  <span>{{body?.zip_code}}</span>
-  <span>{{body?.thumbnail}}</span>
-  <span>{{body?.attachments}}</span>
-  <span>{{body?.counter.messages_total}}</span>
-  <span>{{body?.counter.messages_unread}}</span>
-  <span>{{body?.is_awarded}}</span>
-  <span *ngFor="let category of body?.categories">{{category.id}}</span>
-  <span>{{body?.state}}</span>
-  <span>{{body?.description}}</span>
-  <span>{{body?.enddate}}</span>
-  <span>{{body?.created_at}}</span>
+<div class="card">
+  <div class="card-body">
+    <p class="card-text">{{body?.id}}</p>
+    <p class="card-text">{{body?.title}}</p>
+    <p class="card-text">{{body?.zip_code}}</p>
+    <p class="card-text">{{body?.thumbnail}}</p>
+    <p class="card-text">{{body?.attachments}}</p>
+    <p class="card-text">{{body?.counter.messages_total}}</p>
+    <p class="card-text">{{body?.counter.messages_unread}}</p>
+    <p class="card-text">{{body?.is_awarded}}</p>
+    <p class="card-text" *ngFor="let category of body?.categories">{{category.id}}</p>
+    <p class="card-text">{{body?.state}}</p>
+    <p class="card-text">{{body?.description}}</p>
+    <p class="card-text">{{body?.enddate}}</p>
+    <p class="card-text">{{body?.created_at}}</p>
+  </div>
 </div>

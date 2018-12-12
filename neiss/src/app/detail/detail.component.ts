@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JobService } from '../job.services';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Body } from 'src/models/body';
 @Component({
   selector: 'app-detail',
@@ -11,8 +11,11 @@ export class DetailComponent implements OnInit {
   private body: Body;
   constructor(
     private jobService: JobService,
-    private route: ActivatedRoute
-  ) { }
+    private route: ActivatedRoute,
+    private router: Router
+  ) { 
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+  }
   public ngOnInit(): void {
     this.getJob();
   }

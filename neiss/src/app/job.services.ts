@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable({ providedIn: 'root' })
 export class JobService {
-  constructor(private http: HttpClient) {   }
+  constructor(private http: HttpClient) { }
   public getJSON(): Observable<Job> {
     // TO-DO change encoding from WINDOWS1252 to UTF8
     return this.http.get<Job>('./assets/jobs.json');
